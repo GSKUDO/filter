@@ -1,0 +1,55 @@
+th{
+    border-style: double;
+    border-color: teal;
+    font-weight: bolder;
+    background-color: teal;
+    color: white;
+    width: 25%;
+}
+
+td{
+    border-style: double;
+    border-color: teal;
+}
+
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+}
+
+div {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-content: space-around;
+    align-items:center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+button {
+    margin: auto;
+    height: 40px;
+    width: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: forestgreen;
+}
+
+p {
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+}

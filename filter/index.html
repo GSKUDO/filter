@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="pt-br">
+        <link rel="stylesheet" href="styles.css">
+        <title>FILTER</title>
+    </head>
+    <body>
+        <h1>Cadastro de Clientes</h1>
+        <form>
+            <div>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" value="" placeholder="Nome Completo">
+            </div>
+            <br/>
+            <div>
+            <label for="datavencimento">Data Vencimento:</label>
+            <input type="date" id="datavencimento" value="" placeholder="Data do Vencimento">
+            </div>
+            <br/>
+            <div>
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" value="" placeholder="Valor da Fatura">
+            </div>
+            <br/>
+            <div>
+            <input type="button" id="enviar" value="Enviar" onclick="incluircliente()">
+            <input type="reset" value="Limpar"> 
+            </div>
+        </form>
+
+        <h1>Lista de Boletos</h1>
+        <table id="tblista">
+            <thead>
+                <tr>
+                    <th>Indice</th>
+                    <th>Nome</th>
+                    <th>Data do Vencimento</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br/>
+
+        <h1>Pesquisa de Clientes</h1>
+
+        <div id="botoes">
+            <div>
+            <br>
+            <select id="meses">
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <br> 
+            <button onclick="funcaopesquisarmes()">Pesquisar por mês</button>
+            <br>
+            </div>
+            <div>
+            <label for="datainicio">Data de início:</label>
+            <input type="date" id="datainicio" value="">
+            <br>
+            <label for="datafim">Data de fim:</label>
+            <input type="date" id="datafim" value="">
+            <br>
+            <button onclick="funcaopesquisardata()">Pesquisar por data</button>
+            <br>
+            </div>
+            <div>
+            <label for="valorminimo">Valor mínimo:</label>
+            <input type="number" id="valorminimo" value="">
+            <br>
+            <label for="valormaximo">Valor máximo:</label>
+            <input type="number" id="valormaximo" value="">
+            <br>
+            <button onclick="funcaopesquisarvalor()">Pesquisar por valor</button>
+            </div>
+        </div>
+        <br/>
+        <h1 id="tituloboleto"></h1>
+        <table id="tbpesquisa">
+            <thead>
+                <tr>
+                    <th>Indice</th>
+                    <th>Nome</th>
+                    <th>Data do Vencimento</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="filter.js"></script>
+    </body>
+</html>
